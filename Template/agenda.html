@@ -1,0 +1,16 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+    <h2>Agendamentos</h2>
+
+    <a href="evento/">
+        <button type="button">Novo Evento</button>
+    </a>
+
+    <ul>
+    {% for event in events %}
+        <li> {{ event.tittle }} - {{ event.get_event_date }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
